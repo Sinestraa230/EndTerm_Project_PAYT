@@ -55,9 +55,7 @@ def clean_only_missing_values(in_csv=IN_CSV, out_csv=OUT_CSV):
     print("\n📊 Số lượng ô NaN trước khi chuẩn hóa:")
     print(na_before[na_before > 0].to_string())
 
-    # --------------------------------------------------------------------------
     # 1. CỘT 'language' (71 ô NaN): Nhận diện ngôn ngữ trực tiếp từ 'title'
-    # --------------------------------------------------------------------------
     vn_pattern = re.compile(
         r"[àáảãạăằắẳẵặâầấẩẫậđèéẻẽẹêềếểễệìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵ]",
         re.IGNORECASE,
@@ -67,9 +65,7 @@ def clean_only_missing_values(in_csv=IN_CSV, out_csv=OUT_CSV):
         lambda t: "vi" if bool(vn_pattern.search(str(t))) else "en"
     )
 
-    # --------------------------------------------------------------------------
     # 2. CỘT 'venue' & 'venue_type' (101 ô NaN): Trích xuất từ tiền tố DOI & type
-    # --------------------------------------------------------------------------
     mask_venue_na = df["venue"].isna() | df["venue_type"].isna()
     inferred_venues = df.loc[mask_venue_na].apply(infer_venue_and_type, axis=1)
     for idx, (v_name, v_type) in inferred_venues.items():
@@ -78,26 +74,19 @@ def clean_only_missing_values(in_csv=IN_CSV, out_csv=OUT_CSV):
         if pd.isna(df.loc[idx, "venue_type"]):
             df.loc[idx, "venue_type"] = v_type
 
-    # --------------------------------------------------------------------------
     # 3. CỘT 'keywords' (8 ô NaN): Tổng hợp từ 'topic', 'subfield', 'field' sẵn có
-    # --------------------------------------------------------------------------
     mask_kw_na = df["keywords"].isna()
     df.loc[mask_kw_na, "keywords"] = df.loc[mask_kw_na].apply(
         lambda r: f"{str(r['topic']).lower()}; {str(r['subfield']).lower()}; {str(r['field']).lower()}",
         axis=1,
     )
-
-    # --------------------------------------------------------------------------
     # 4. CỘT 'doi' (181 ô NaN): Chuẩn hóa bằng URI định danh gốc của OpenAlex
-    # --------------------------------------------------------------------------
     mask_doi_na = df["doi"].isna()
     df.loc[mask_doi_na, "doi"] = "https://openalex.org/" + df.loc[mask_doi_na, "work_id"].astype(str)
 
-    # --------------------------------------------------------------------------
     # 5. CỘT 'fwci' & 'citation_percentile' (2,097 ô NaN của nhóm preprint):
     #    Tính toán xác định dựa trên đường chuẩn trích dẫn của 5,501 bài 'article'
     #    trong cùng (publication_year, subfield)
-    # --------------------------------------------------------------------------
     valid_articles = df[df["fwci"].notna() & df["citation_percentile"].notna()].copy()
 
     # 5.1. Ước lượng kỳ vọng trích dẫn của ngành (expected_cites = cited_by_count / fwci)
@@ -157,10 +146,8 @@ def clean_only_missing_values(in_csv=IN_CSV, out_csv=OUT_CSV):
 
     mask_pct_na = df["citation_percentile"].isna()
     df.loc[mask_pct_na, "citation_percentile"] = df.loc[mask_pct_na].apply(compute_missing_percentile, axis=1)
-
-    # --------------------------------------------------------------------------
+-
     # 6. KIỂM ĐỊNH BẢO TOÀN DỮ LIỆU GỐC (100% NON-NAN INVARIANCE CHECK)
-    # --------------------------------------------------------------------------
     for col in df.columns:
         not_na_mask = df_raw[col].notna()
         if pd.api.types.is_float_dtype(df_raw[col]):
