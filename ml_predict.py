@@ -18,7 +18,6 @@ CLEAN_CSV_FILE = "clean_openalex_papers.csv"
 FORECAST_FOCUS_CSV = "forecast_2025_2027_top6_universities.csv"
 FORECAST_ALL_CSV = "forecast_2025_2027_all20_universities.csv"
 
-# 3 Trường ĐH tiêu biểu Việt Nam (bao gồm PTIT) & 3 Trường ĐH hàng đầu Thế giới
 FOCAL_VN_UNIS = ["HUST", "HCMUT", "PTIT"]
 FOCAL_GLOBAL_UNIS = ["MIT", "Stanford", "CMU"]
 FOCAL_ALL = FOCAL_VN_UNIS + FOCAL_GLOBAL_UNIS
@@ -46,7 +45,6 @@ def build_institution_year_panel(csv_path=CLEAN_CSV_FILE):
     df["is_intl"] = (df["countries_distinct_count"] > 1).astype(int)
     df["is_oa_int"] = df["is_oa"].astype(int)
 
-    # Xác định bài báo lọt Top 10% (Hiệu chỉnh độ trễ trích dẫn cho các bài mới xuất bản cuối năm 2024)
     df["is_top10"] = np.where(
         df["months_exposed"] >= 2.5,
         (df["citation_percentile"] >= 0.90).astype(int),
@@ -163,9 +161,7 @@ def run_two_tier_ml_pipeline():
     panel = build_institution_year_panel()
     full_panel, model_df = add_lag_features(panel)
 
-    # ==========================================================================
     # BƯỚC 2: HUẤN LUYỆN LỚP 1 - LINEAR REGRESSION (DỰ BÁO SỐ BÀI BÁO & TOP 10%)
-    # ==========================================================================
     print("\n" + "=" * 80)
     print("📈 [Bước 2/4] LỚP 1: MÔ HÌNH LINEAR REGRESSION (DỰ BÁO SẢN LƯỢNG & BÀI TOP 10%)")
     print("=" * 80)
@@ -182,7 +178,6 @@ def run_two_tier_ml_pipeline():
         "inst_growth_momentum",
     ]
 
-    # Chia tập Train (2020 - 2023: 80 dòng) và Test (2024: 20 dòng) theo đúng lát cắt thời gian
     train_mask = model_df["publication_year"] <= 2023
     test_mask = model_df["publication_year"] == 2024
 
@@ -262,9 +257,7 @@ def run_two_tier_ml_pipeline():
     print("  • Báo cáo phân loại chi tiết (Precision / Recall / F1-Score):")
     print(classification_report(y_test_t2, y_pred_t2, digits=4))
 
-    # ==========================================================================
     # BƯỚC 4: DỰ BÁO CUỐN CHIẾU 3 NĂM TỚI (2025, 2026, 2027) KẾT HỢP LỚP 1 -> LỚP 2
-    # ==========================================================================
     print("=" * 80)
     print("🔮 [Bước 4/4] DỰ BÁO 3 NĂM TỚI (2025 – 2027): 3 ĐH VIỆT NAM (CÓ PTIT) & 3 ĐH THẾ GIỚI")
     print("=" * 80)
