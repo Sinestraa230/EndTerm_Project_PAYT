@@ -1,0 +1,21 @@
+﻿label,region,country_code,openalex_id,matched_name,works_count,similarity
+HUST,Vietnam,VN,I94518387,Hanoi University of Science and Technology,0,1.0
+VNU Hanoi (UET),Vietnam,VN,I177233841,"Vietnam National University, Hanoi",0,1.0
+PTIT,Vietnam,VN,I4210096823,Posts and Telecommunications Institute of Technology - Ho Chi Minh City,0,0.85
+UIT,Vietnam,VN,I4405263268,Thai Nguyen University of Information and Communication Technology,0,0.71
+HCMUT,Vietnam,VN,I47265099,Ho Chi Minh City University of Technology,0,1.0
+FPT University,Vietnam,VN,I109689652,FPT University,0,1.0
+Ton Duc Thang University,Vietnam,VN,I141445968,Ton Duc Thang University,0,1.0
+Duy Tan University,Vietnam,VN,I170238339,Duy Tan University,0,1.0
+Phenikaa University,Vietnam,VN,I4210124651,Phenikaa University,0,1.0
+VinUniversity,Vietnam,VN,I4210142044,VinUniversity,0,1.0
+CMU,Global,US,I74973139,Carnegie Mellon University,0,1.0
+MIT,Global,US,I63966007,Massachusetts Institute of Technology,0,1.0
+Stanford,Global,US,I97018004,Stanford University,0,1.0
+UC Berkeley,Global,US,I95457486,"University of California, Berkeley",0,1.0
+Tsinghua,Global,CN,I99065089,Tsinghua University,0,1.0
+Peking University,Global,CN,I20231570,Peking University,0,1.0
+Oxford,Global,GB,I40120149,University of Oxford,0,1.0
+ETH Zurich,Global,CH,I35440088,ETH Zurich,0,1.0
+Toronto,Global,CA,I185261750,University of Toronto,0,1.0
+NUS,Global,SG,I165932596,National University of Singapore,0,1.0

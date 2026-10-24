@@ -1,0 +1,61 @@
+﻿region,institution,Forecast_Year,Pred_Total_Papers,Paper_Growth_YoY (%),Pred_Top10_Papers,Pred_Core_AI_Papers,Pred_FWCI,Pred_Intl_Collab (%),Pred_Position_Tier,Confidence_Max_Prob (%),Prob_Top 5% Thế giới (%),Prob_Top 15% Thế giới (%),Prob_Top 30% Thế giới (%),Prob_Top 50% Thế giới (%)
+Global,CMU,2025,923,4.3,209,57,1.54,55.0,1. Top 5% Thế giới (World Elite),95.5,95.5,4.5,0.0,0.0
+Global,CMU,2026,963,4.3,208,60,1.42,56.2,1. Top 5% Thế giới (World Elite),95.6,95.6,4.4,0.0,0.0
+Global,CMU,2027,1005,4.4,209,62,1.27,57.4,1. Top 5% Thế giới (World Elite),96.1,96.1,3.9,0.0,0.0
+Global,ETH Zurich,2025,746,7.3,248,57,1.88,64.9,1. Top 5% Thế giới (World Elite),99.3,99.3,0.7,0.0,0.0
+Global,ETH Zurich,2026,794,6.4,238,60,1.53,66.1,1. Top 5% Thế giới (World Elite),98.7,98.7,1.3,0.0,0.0
+Global,ETH Zurich,2027,839,5.7,231,63,1.26,67.3,1. Top 5% Thế giới (World Elite),98.2,98.2,1.8,0.0,0.0
+Global,MIT,2025,1066,4.0,324,59,2.76,47.4,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,MIT,2026,1109,4.0,307,63,2.06,48.6,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,MIT,2027,1153,4.0,294,66,1.59,49.8,1. Top 5% Thế giới (World Elite),99.9,99.9,0.1,0.0,0.0
+Global,NUS,2025,1123,7.7,365,56,1.67,77.4,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,NUS,2026,1209,7.7,347,60,1.77,78.6,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,NUS,2027,1302,7.7,336,64,1.76,79.8,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,Oxford,2025,912,4.6,273,55,2.37,68.7,1. Top 5% Thế giới (World Elite),99.9,99.9,0.1,0.0,0.0
+Global,Oxford,2026,950,4.2,260,59,1.95,69.9,1. Top 5% Thế giới (World Elite),99.9,99.9,0.1,0.0,0.0
+Global,Oxford,2027,988,4.0,251,62,1.63,71.1,1. Top 5% Thế giới (World Elite),99.8,99.8,0.2,0.0,0.0
+Global,Peking University,2025,1307,9.6,431,62,1.5,38.7,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,Peking University,2026,1405,7.5,407,66,1.39,39.9,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,Peking University,2027,1489,6.0,387,70,1.27,41.1,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,Stanford,2025,1012,4.0,269,67,1.12,36.2,1. Top 5% Thế giới (World Elite),98.5,98.5,1.5,0.0,0.0
+Global,Stanford,2026,1052,4.0,260,69,1.01,37.4,1. Top 5% Thế giới (World Elite),98.1,98.1,1.9,0.0,0.0
+Global,Stanford,2027,1094,4.0,254,71,0.87,38.6,1. Top 5% Thế giới (World Elite),97.7,97.7,2.3,0.0,0.0
+Global,Toronto,2025,662,8.9,188,55,1.5,56.2,1. Top 5% Thế giới (World Elite),74.2,74.2,25.8,0.1,0.0
+Global,Toronto,2026,714,7.9,187,58,1.22,57.4,1. Top 5% Thế giới (World Elite),72.5,72.5,27.4,0.0,0.0
+Global,Toronto,2027,764,7.0,187,60,0.99,58.6,1. Top 5% Thế giới (World Elite),72.9,72.9,27.1,0.0,0.0
+Global,Tsinghua,2025,1328,9.1,513,61,1.36,31.2,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,Tsinghua,2026,1419,6.9,473,66,1.25,32.4,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,Tsinghua,2027,1494,5.3,440,70,1.12,33.6,1. Top 5% Thế giới (World Elite),100.0,100.0,0.0,0.0,0.0
+Global,UC Berkeley,2025,788,4.0,170,58,0.87,38.7,2. Top 15% Thế giới (Global Leading),72.2,27.4,72.2,0.4,0.0
+Global,UC Berkeley,2026,820,4.1,171,60,0.85,39.9,2. Top 15% Thế giới (Global Leading),67.8,31.9,67.8,0.2,0.0
+Global,UC Berkeley,2027,853,4.0,174,62,0.85,41.1,2. Top 15% Thế giới (Global Leading),60.5,39.3,60.5,0.1,0.0
+Vietnam,Duy Tan University,2025,83,9.2,32,26,2.51,85.0,2. Top 15% Thế giới (Global Leading),77.3,0.6,77.3,20.6,1.4
+Vietnam,Duy Tan University,2026,96,15.7,35,28,2.0,85.0,2. Top 15% Thế giới (Global Leading),83.4,0.5,83.4,14.3,1.8
+Vietnam,Duy Tan University,2027,115,19.8,40,30,1.62,85.0,2. Top 15% Thế giới (Global Leading),88.1,0.4,88.1,9.6,1.9
+Vietnam,FPT University,2025,107,33.8,22,42,1.4,40.0,3. Top 30% Thế giới (High-Impact Regional),88.8,0.0,10.5,88.8,0.7
+Vietnam,FPT University,2026,136,27.1,31,42,0.98,41.2,3. Top 30% Thế giới (High-Impact Regional),80.1,0.0,18.1,80.1,1.8
+Vietnam,FPT University,2027,166,22.1,40,43,0.85,42.4,3. Top 30% Thế giới (High-Impact Regional),70.1,0.0,27.7,70.1,2.1
+Vietnam,HCMUT,2025,111,38.8,29,45,1.01,31.2,3. Top 30% Thế giới (High-Impact Regional),92.1,0.0,7.1,92.1,0.8
+Vietnam,HCMUT,2026,143,28.8,37,45,0.85,32.4,3. Top 30% Thế giới (High-Impact Regional),87.4,0.0,11.3,87.4,1.3
+Vietnam,HCMUT,2027,175,22.4,45,45,0.85,33.6,3. Top 30% Thế giới (High-Impact Regional),81.8,0.0,16.7,81.8,1.6
+Vietnam,HUST,2025,150,6.4,31,42,1.03,51.2,3. Top 30% Thế giới (High-Impact Regional),59.6,0.0,38.8,59.6,1.6
+Vietnam,HUST,2026,159,6.0,36,42,0.88,52.4,3. Top 30% Thế giới (High-Impact Regional),51.3,0.0,46.7,51.3,2.1
+Vietnam,HUST,2027,169,6.3,41,42,0.85,53.6,2. Top 15% Thế giới (Global Leading),53.6,0.0,53.6,44.3,2.2
+Vietnam,PTIT,2025,6,0.0,1,4,0.85,17.9,4. Top 50% Thế giới (Emerging Tech Tier),88.9,0.0,0.0,11.1,88.9
+Vietnam,PTIT,2026,6,0.0,1,7,0.85,19.1,4. Top 50% Thế giới (Emerging Tech Tier),82.5,0.0,0.0,17.5,82.5
+Vietnam,PTIT,2027,6,0.0,1,10,0.85,20.3,4. Top 50% Thế giới (Emerging Tech Tier),73.3,0.0,0.1,26.6,73.3
+Vietnam,Phenikaa University,2025,89,78.0,23,19,1.57,31.2,3. Top 30% Thế giới (High-Impact Regional),73.0,0.0,1.3,73.0,25.7
+Vietnam,Phenikaa University,2026,132,48.3,34,22,1.25,32.4,3. Top 30% Thế giới (High-Impact Regional),64.9,0.0,2.7,64.9,32.4
+Vietnam,Phenikaa University,2027,178,34.8,46,25,0.99,33.6,3. Top 30% Thế giới (High-Impact Regional),57.2,0.0,5.4,57.2,37.4
+Vietnam,Ton Duc Thang University,2025,45,4.7,4,16,1.35,47.7,3. Top 30% Thế giới (High-Impact Regional),53.1,0.0,2.7,53.1,44.2
+Vietnam,Ton Duc Thang University,2026,47,4.4,1,17,1.06,48.9,4. Top 50% Thế giới (Emerging Tech Tier),51.5,0.0,2.9,45.6,51.5
+Vietnam,Ton Duc Thang University,2027,49,4.3,1,18,0.85,50.1,4. Top 50% Thế giới (Emerging Tech Tier),56.4,0.0,3.4,40.3,56.4
+Vietnam,UIT,2025,15,7.1,1,8,0.85,15.0,4. Top 50% Thế giới (Emerging Tech Tier),78.6,0.0,0.0,21.4,78.6
+Vietnam,UIT,2026,16,6.7,1,10,0.85,16.2,4. Top 50% Thế giới (Emerging Tech Tier),72.2,0.0,0.0,27.7,72.2
+Vietnam,UIT,2027,17,6.2,1,12,0.85,17.4,4. Top 50% Thế giới (Emerging Tech Tier),64.8,0.0,0.1,35.1,64.8
+Vietnam,VNU Hanoi (UET),2025,79,3.9,13,26,0.87,26.2,3. Top 30% Thế giới (High-Impact Regional),79.8,0.0,1.2,79.8,19.0
+Vietnam,VNU Hanoi (UET),2026,82,3.8,14,27,0.85,27.4,3. Top 30% Thế giới (High-Impact Regional),81.0,0.0,1.5,81.0,17.4
+Vietnam,VNU Hanoi (UET),2027,85,3.7,17,28,0.85,28.6,3. Top 30% Thế giới (High-Impact Regional),82.1,0.0,1.9,82.1,16.0
+Vietnam,VinUniversity,2025,33,17.9,12,25,1.97,85.0,2. Top 15% Thế giới (Global Leading),67.9,0.1,67.9,28.3,3.7
+Vietnam,VinUniversity,2026,39,18.2,19,28,1.83,85.0,2. Top 15% Thế giới (Global Leading),75.2,0.1,75.2,22.3,2.4
+Vietnam,VinUniversity,2027,46,17.9,22,31,1.63,85.0,2. Top 15% Thế giới (Global Leading),80.5,0.1,80.5,17.7,1.7
