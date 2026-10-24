@@ -1,21 +1,3 @@
-"""
-crawl_openalex.py
-Thu thập metadata bài báo (paper) Khoa học Máy tính của 20 trường từ OpenAlex API.
-TOÀN BỘ số liệu lấy trực tiếp từ API, không sinh / không random / không nội suy.
-
-Chuẩn bị:
-    1. Tạo tài khoản miễn phí tại https://openalex.org, lấy key ở https://openalex.org/settings/api
-       (từ 2026 OpenAlex yêu cầu API key; key miễn phí có 1 USD/ngày, script này chỉ tốn vài cent).
-    2. Đặt key vào biến môi trường (KHÔNG viết thẳng key vào code):
-         Windows PowerShell:  $env:OPENALEX_API_KEY="xxxx"
-         Windows CMD:         set OPENALEX_API_KEY=xxxx
-         Linux/macOS:         export OPENALEX_API_KEY=xxxx
-    3. pip install requests pandas
-
-Chạy:
-    python crawl_openalex.py --check     # chỉ đếm số paper theo từng trường/năm (gần như miễn phí)
-    python crawl_openalex.py             # crawl thật -> openalex_papers.csv
-"""
 import argparse
 import difflib
 import json
@@ -27,10 +9,9 @@ from pathlib import Path
 import pandas as pd
 import requests
 
-# ------------------------------------------------------------------ CẤU HÌNH
 API = "https://api.openalex.org"
 API_KEY = os.environ.get("OPENALEX_API_KEY", "")
-MAILTO = os.environ.get("OPENALEX_MAILTO", "")  # tuỳ chọn: email liên hệ
+MAILTO = os.environ.get("OPENALEX_MAILTO", "") 
 
 YEAR_FROM, YEAR_TO = 2019, 2024      # khoảng thời gian crawl (đủ thời gian để paper có trích dẫn)
 MAX_PER_INST_YEAR = 80               # tối đa số paper / trường / năm (giữ cân bằng giữa các trường)
